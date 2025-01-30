@@ -1,0 +1,3 @@
+*.dart linguist-detectable=true
+/lib/* linguist-detectable=true
+
