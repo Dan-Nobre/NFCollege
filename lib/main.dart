@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:nfa/presentation/screen/read_write_nfc_screen.dart';
 import 'package:nfcollege/Features/NFC/View/read_write_nfc_screen.dart';
+import 'package:nfcollege/Features/NFC/View/registro_presenca_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,12 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'NFC MANAGER',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const ReadWriteNFCScreen()
+      home: const RegistroPresencaScreen()
     );
   }
 }
