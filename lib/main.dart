@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 // import 'package:nfa/presentation/screen/read_write_nfc_screen.dart';
-import 'package:nfcollege/presentation/screen/read_write_nfc_screen.dart';
+import 'package:nfcollege/Features/NFC/View/read_write_nfc_screen.dart';
 
 void main() {
   runApp(const MyApp());

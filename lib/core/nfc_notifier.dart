@@ -61,14 +61,21 @@ class NFCNotifier extends ChangeNotifier {
     Map<String, dynamic> nfcData = {
       'nfca': tag.data['nfca'],
       'mifareultralight': tag.data['mifareultralight'],
-      'ndef': tag.data['ndef']
+      'ndef': tag.data['ndefformatable'] // Verificar como o ndef é recebido no cartão
     };
 
     String? decodedText;
     if (nfcData.containsKey('ndef')) {
-      List<int> payload =
-          nfcData['ndef']['cachedMessage']?['records']?[0]['payload'];
-      decodedText = String.fromCharCodes(payload);
+    // List<int> payload =
+      //     // nfcData['ndef']['cachedMessage']?['records']?[0]['payload'];
+      //     nfcData['ndef'][0];
+      // List<int> payload = nfcData['ndef'];
+      var ndef = nfcData['ndef'];
+      var identifier = ndef["identifier"];
+      var decodedText = String.fromCharCodes(identifier);
+      print(ndef);
+      // decodedText = String.fromCharCodes(payload);
+      // print(payload);
     }
 
     _message = decodedText ?? "No Data Found";
