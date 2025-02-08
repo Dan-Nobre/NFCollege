@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:nfcollege/Features/InitialScreen/View/InitialScreen.dart';
+// import 'package:nfa/presentation/screen/read_write_nfc_screen.dart';
+import 'package:nfcollege/Features/NFC/View/read_write_nfc_screen.dart';
+import 'package:nfcollege/Features/NFC/View/registro_presenca_screen.dart';
 
 
 void main() {
-  runApp(const MeuApp());
+  runApp(const MyApp());
 }
 
-class MeuApp extends StatelessWidget {
-  const MeuApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Meu App Flutter',
+      title: 'NFC MANAGER',
       theme: ThemeData(
         fontFamily: 'Satoshi',
         textTheme: TextTheme(
