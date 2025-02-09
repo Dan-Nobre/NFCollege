@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nfcollege/Features/InitialScreen/View/InitialScreen.dart';
+
+import 'Features/InitialScreen/View/InitialScreen.dart';
 // import 'package:nfa/presentation/screen/read_write_nfc_screen.dart';
 
 
