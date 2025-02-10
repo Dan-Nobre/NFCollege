@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:nfcollege/Features/InitialScreen/View/InitialScreen.dart';
-
-import 'Features/InitialScreen/View/InitialScreen.dart';
 // import 'package:nfa/presentation/screen/read_write_nfc_screen.dart';
 
 
@@ -16,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'NFC MANAGER',
+      title: 'NFC COLLEGE',
       theme: ThemeData(
         fontFamily: 'Satoshi',
         textTheme: TextTheme(
