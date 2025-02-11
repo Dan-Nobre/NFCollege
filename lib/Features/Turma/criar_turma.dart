@@ -6,6 +6,7 @@ class CriarTurmaScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Criar Turma"),
+        centerTitle: true,
         backgroundColor: Colors.blue[50],
         elevation: 0,
       ),
@@ -15,22 +16,45 @@ class CriarTurmaScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             _buildTextField("NOME DA TURMA", "Insira o nome da turma"),
-            _buildImagePicker("INÍCIO DA AULA", "Resources/assets/images/calendar.png"),
-            _buildImagePicker("FIM DA AULA", "Resources/assets/images/calendar.png"),
             Row(
               children: [
-                Expanded(child: _buildImagePicker("HORÁRIOS", "Resources/assets/images/time.png")),
+                Expanded(child: _buildImagePicker("INICIO DA AULAS", "Resources/assets/images/Calendario.png", imageSize: 20)),
                 SizedBox(width: 10),
-                Icon(Icons.arrow_right_alt, size: 28),
-                SizedBox(width: 10),
-                Expanded(child: _buildImagePicker("", "Resources/assets/images/time.png")),
               ],
             ),
+            Row(
+              children: [
+                Expanded(child: _buildImagePicker("FIM DAS AULAS", "Resources/assets/images/Calendario.png", imageSize: 20)),
+                SizedBox(width: 10),
+              ],
+            ),
+           Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(
+                child: _buildImagePicker("HORÁRIO INÍCIO", "Resources/assets/images/Clock.png", imageSize: 17),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Icon(Icons.arrow_right_alt, size: 28),
+              ),
+              Expanded(
+                child: _buildImagePicker("HORÁRIO FIM", "Resources/assets/images/Clock.png", imageSize: 17),
+              ),
+            ],
+          ),
+
             SizedBox(height: 16),
             Text("RECORRÊNCIA", style: TextStyle(fontWeight: FontWeight.bold)),
-            Wrap(
-              spacing: 8,
-              children: ["D", "S", "T", "Q", "Q", "S", "S"].map((dia) => _buildCircle(dia)).toList(),
+            SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Wrap(
+                  spacing: 8,
+                  children: ["D", "S", "T", "Q", "Q", "S", "S"].map((dia) => _buildCircle(dia)).toList(),
+                ),
+              ],
             ),
             SizedBox(height: 16),
             _buildTextField("LOCAL", "Insira uma localização", isLocation: true),
@@ -50,9 +74,10 @@ class CriarTurmaScreen extends StatelessWidget {
                 ),
               ),
                 child: const Text("Salvar",
-                  style: TextStyle(color: Colors.white,)),
+                  style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
             ),
             ),
+            Spacer(),
           ],
         ),
       ),
@@ -69,7 +94,7 @@ class CriarTurmaScreen extends StatelessWidget {
           decoration: InputDecoration(
             hintText: hint,
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
-            prefixIcon: isLocation ? Image.asset("Resources/assets/images/location.png", width: 24) : null,
+            prefixIcon: isLocation ? Image.asset("Resources/assets/images/Location.png", width: 24) : null,
           ),
         ),
         SizedBox(height: 16),
@@ -77,11 +102,12 @@ class CriarTurmaScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildImagePicker(String label, String imagePath) {
+  Widget _buildImagePicker(String label, String imagePath, {double imageSize = 32}) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        if (label.isNotEmpty) Text(label, style: TextStyle(fontWeight: FontWeight.bold)),
+        if (label.isNotEmpty) 
+          Text(label, style: TextStyle(fontWeight: FontWeight.bold)),
         SizedBox(height: 4),
         Container(
           decoration: BoxDecoration(
@@ -89,9 +115,23 @@ class CriarTurmaScreen extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
           ),
           child: ListTile(
-            leading: Image.asset(imagePath, width: 24),
-            title: Text("Selecionar"),
-            trailing: Icon(Icons.arrow_drop_down),
+            contentPadding: EdgeInsets.symmetric(horizontal: 12),
+            leading: SizedBox(
+              width: imageSize,
+              height: imageSize,
+              child: Image.asset(imagePath, fit: BoxFit.contain),
+            ),
+            title: Text(
+              "12:00",
+              style: TextStyle(fontSize: 18), 
+              softWrap: false,
+              overflow: TextOverflow.ellipsis,
+            ),
+            trailing: SizedBox(
+              width: 24,
+              height: 24,
+              child: Image.asset("Resources/assets/images/Chevron-Down.png"),
+            ),
             onTap: () {},
           ),
         ),
