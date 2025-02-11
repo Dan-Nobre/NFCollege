@@ -22,27 +22,36 @@ class CriarTurmaScreen extends StatelessWidget {
                 SizedBox(width: 10),
               ],
             ),
+            SizedBox(height: 20),
             Row(
               children: [
                 Expanded(child: _buildImagePicker("FIM DAS AULAS", "Resources/assets/images/Calendario.png", imageSize: 20)),
                 SizedBox(width: 10),
               ],
             ),
-           Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Expanded(
-                child: _buildImagePicker("HORÁRIO INÍCIO", "Resources/assets/images/Clock.png", imageSize: 17),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: Icon(Icons.arrow_right_alt, size: 28),
-              ),
-              Expanded(
-                child: _buildImagePicker("HORÁRIO FIM", "Resources/assets/images/Clock.png", imageSize: 17),
-              ),
-            ],
-          ),
+            SizedBox(height: 20),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Expanded(
+                  child: _buildImagePicker("HORÁRIO INÍCIO", "Resources/assets/images/Clock.png", imageSize: 17),
+                ),
+                SizedBox(width: 20),
+                // Padding(
+                //   padding: const EdgeInsets.symmetric(horizontal: 10),
+                //   child: Column( // Garante alinhamento vertical
+                //     mainAxisAlignment: MainAxisAlignment.center,
+                //     children: [
+                //       Image.asset("Resources/assets/images/Arrow Right.png", height: 24),
+                //     ],
+                //   ),
+                // ),
+                Expanded(
+                  child: _buildImagePicker("HORÁRIO FIM", "Resources/assets/images/Clock.png", imageSize: 17),
+                ),
+              ],
+            ),
+
 
             SizedBox(height: 16),
             Text("RECORRÊNCIA", style: TextStyle(fontWeight: FontWeight.bold)),

@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'NFC COLLEGE',
       theme: ThemeData(
+        scaffoldBackgroundColor: Color(0xFFEFF9FF),
         fontFamily: 'Satoshi',
         textTheme: TextTheme(
           bodyLarge: TextStyle(fontSize: 18, fontWeight: FontWeight.bold), // Padrão: Negrito
