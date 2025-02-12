@@ -34,6 +34,9 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  nfc_manager: ^3.5.0
+  provider: ^6.1.2
+  intl: ^0.20.2
 
 dev_dependencies:
   flutter_test:
@@ -51,7 +54,28 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  assets:
+  - Resources/assets/images/addButton.png
+  - Resources/assets/images/arrow-left.png
+  - Resources/assets/images/arrow-right.png
+  - Resources/assets/images/arrow.png
+  - Resources/assets/images/ausente.png
+  - Resources/assets/images/CopyButton.png
+  - Resources/assets/images/create-room.png
+  - Resources/assets/images/done.png
+  - Resources/assets/images/edit.png
+  - Resources/assets/images/enter-room.png
+  - Resources/assets/images/Location.png
+  - Resources/assets/images/presente.png
+  - Resources/assets/images/share-icon.png
+  - Resources/assets/images/time.png
+  - Resources/assets/images/user-icon.png
+  - Resources/assets/images/Arrow Right.png
+  - Resources/assets/images/Chevron-Down.png
+  - Resources/assets/images/Clock.png
+  - Resources/assets/images/Calendario.png
 
+  
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -73,17 +97,15 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
+
+  fonts:
+    - family: Satoshi
+      fonts:
+        - asset: Resources/Fonts/Satoshi-Regular.otf
+        - asset: Resources/Fonts/Satoshi-Bold.otf
+          weight: 700
+        - asset: Resources/Fonts/Satoshi-Italic.otf
+          style: italic
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
