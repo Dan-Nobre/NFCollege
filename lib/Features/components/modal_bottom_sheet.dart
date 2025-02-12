@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nfcollege/Features/IngressarTurma/ingressar_turma_screen.dart';
 import 'package:nfcollege/Features/Turma/criar_turma.dart';
 
 class AddModal extends StatelessWidget {
@@ -34,7 +35,10 @@ class AddModal extends StatelessWidget {
             title: "Ingressar em uma turma",
             subtitle: "Entre em uma turma já criada.",
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => IngressarTurmaScreen()),
+              );
             },
           ),
         ],
