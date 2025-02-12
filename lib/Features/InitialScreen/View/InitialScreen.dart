@@ -8,6 +8,7 @@ class InitialScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xFFEFF9FF),
         leading: IconButton(
             icon: Image.asset("Resources/assets/images/user-icon.png"),
             onPressed: () {

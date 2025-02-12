@@ -60,17 +60,21 @@ flutter:
   - Resources/assets/images/arrow-right.png
   - Resources/assets/images/arrow.png
   - Resources/assets/images/ausente.png
-  - Resources/assets/images/calendar.png
   - Resources/assets/images/CopyButton.png
   - Resources/assets/images/create-room.png
   - Resources/assets/images/done.png
   - Resources/assets/images/edit.png
   - Resources/assets/images/enter-room.png
-  - Resources/assets/images/location.png
+  - Resources/assets/images/Location.png
   - Resources/assets/images/presente.png
   - Resources/assets/images/share-icon.png
   - Resources/assets/images/time.png
   - Resources/assets/images/user-icon.png
+  - Resources/assets/images/Arrow Right.png
+  - Resources/assets/images/Chevron-Down.png
+  - Resources/assets/images/Clock.png
+  - Resources/assets/images/Calendario.png
+
   
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
