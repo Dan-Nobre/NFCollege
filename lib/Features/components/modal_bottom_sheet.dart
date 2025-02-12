@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nfcollege/Features/visualisacao%20de%20turmas/visualizacao_turma_view.dart';
 
 class AddModal extends StatelessWidget {
   const AddModal({super.key});
@@ -21,7 +22,7 @@ class AddModal extends StatelessWidget {
             title: "Criar uma turma",
             subtitle: "Crie uma turma para registrar presenças.",
             onTap: () {
-              Navigator.pop(context);
+              screen_turma(title: "Programação Orientada");
             },
           ),
           const SizedBox(height: 16),
